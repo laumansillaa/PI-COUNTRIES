@@ -1,0 +1,58 @@
+.homecss{
+    background-image: url('../styles/image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    
+}
+
+.navbar {
+    
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    backdrop-filter: blur(8px);
+    
+
+}
+
+
+.containercard{
+    width: 100%;
+    height: 1400px;
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr) ;
+    grid-template-rows:  repeat(2,450px);
+    gap: 1em;
+
+}
+
+
+.subnav {
+    width: 100vw;
+    height: 5vh;    
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-around;
+    
+}
+
+.search{
+    
+    grid-column: 2/7;
+    width: 400px;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    /* text-align: center; */
+    
+
+}

@@ -1,0 +1,40 @@
+.h1landing{
+    margin-top: 0%;
+    font-family: -webkit-pictograph;
+}
+
+
+.button{
+    font-family: 'Akaya Telivigala', cursive;
+    color: #000 ;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0.5em 1.2em;
+    background: rgba(0,0,0,0);
+    border: 2px solid;
+    border-color: #fff;
+    transition: all 1s ease;
+    margin-top: 150px;
+ }
+ .button:hover {
+   background: #000;
+   color: #fff ;
+   cursor: pointer;
+ }
+
+.container{ 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);    
+    box-shadow: rgb(0 0 0 / 19%) 0px 10px 20px, rgb(0 0 0 / 23%) 0px 6px 6px;
+    padding: 4em;
+    margin: auto;    
+    justify-content: center;    
+    align-items: center;
+    border-radius: 2em;
+    width: 300px;
+    height: 300px;
+    backdrop-filter: blur(5px);
+    
+    
+    
+
+}
