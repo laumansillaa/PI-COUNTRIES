@@ -49,7 +49,7 @@ function rootReducer (state = initialState, action) {
             // const activity = state.country.filter(e => {
             //     console.log("ENTRE", e)
             // if (e.exercises && e.exercises[0].includes(action.payload)) return e
-
+            // prueba
             // })   
             //console.log("SOY EL REDUCER ---> ",activity)
             
