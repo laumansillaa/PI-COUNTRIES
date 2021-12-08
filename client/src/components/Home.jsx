@@ -21,6 +21,7 @@ export default function Home () {
     const indexOfFirstCounetry = indexOfLastCountry - countriesPerPage 
     const currentCountry = allCountries.slice(indexOfFirstCounetry, indexOfLastCountry) 
     const allActivity = useSelector((state) => state.activity)
+    //console.log("VENGO DE HOME", allActivity)
 
 
     const paginado = (pageNumber) => {
@@ -73,41 +74,43 @@ export default function Home () {
 
 
 
+
+
     return (
         <div className= 'homecss'>
             <div className= 'nav'>                
                 <div className= 'nav1'>
-                    <div className= 'activity'>
-                        <Link to= '/activity' > CREAR ACTIVIDAD </Link>
+                    <div className= 'hola'>
+                        <Link to= '/activity' ><button className= 'select'>CREAR ACTIVIDAD</button></Link>
                     </div>
-                    <div className= 'landing'>
-                        <Link to= '/'>VOLVER A LANDING PAGE</Link>
+                    <div className= 'hola'>
+                        <Link to= '/'><button className= 'select'>LANDING PAGE</button></Link>
                     </div>
-                    <div className= 'search'>
-                        <SearchBar/>
+                    <div className= 'hola'>
+                        <SearchBar className= 'select'/>
                     </div>
                 </div>
                 <div className= 'title'>
                     <h2> PROYECT COUNTRIES </h2>  
                 </div>                
                 <div className= 'navbar'>
-                    <button onClick= {e => {handleClick(e)}}>Volver a cargar los paises</button>
+                    <button onClick= {e => {handleClick(e)}} className='select' >Volver a cargar los paises</button>
                     <div>
-                        <select onChange= {e => handleSortByName(e)} >
+                        <select onChange= {e => handleSortByName(e)} className='select' >
                             <option> Ordenar por nombre </option>
                             <option value= 'asc' >A - Z</option>
                             <option value= 'desc' >Z - A</option>
                         </select>
                     </div>
                     <div>
-                        <select onChange= {e => handleSortByPopulation(e)}> 
+                        <select onChange= {e => handleSortByPopulation(e)} className='select' > 
                             <option> Ordenar por poblacion </option>
                             <option value='mayor' > Menor a mayor </option>
                             <option value='menor'> Mayor a menor </option>
                         </select>
                     </div>
                     <div>
-                        <select onChange= {e => handleFilterContinent(e)}>
+                        <select onChange= {e => handleFilterContinent(e)} className='select' >
                             <option value= 'all'> Todos </option>
                             <option value= 'Americas' > America </option>
                             <option value= 'Europe' > Europa </option>
@@ -117,7 +120,7 @@ export default function Home () {
                         </select>
                     </div>
                     <div>
-                        <select onChange= {e => handleFilterActivity(e)}>
+                        <select onChange= {e => handleFilterActivity(e)} className='select' >
                             <option value= 'all'> Actividad turistica </option> 
                             {allActivity.map(e => {
                                 return (
@@ -126,10 +129,11 @@ export default function Home () {
                             })}                       
                         </select>
                     </div>
+
                     <div className= 'subnav'>
                         <Paginado countriesPerPage= {countriesPerPage} 
                          allCountries={allCountries.length}
-                         paginado = {paginado}  />
+                         paginado = {paginado}/>
                     </div>
                 </div>
 
@@ -137,10 +141,11 @@ export default function Home () {
             <div className= 'containercard'>
                 {
                     currentCountry?.map(e => {
+                        //console.log("HOLA", e.id)
                         return (
                             <div className= 'cardHome'>
-                                <Link to= {'/countries/' + e.id}>
-                                    <Card key={e.id} country= {e}/>
+                                <Link to= {'/countries/' + e.id}  style={{ textDecoration: 'none'}} >
+                                    <Card key={e.id} country= {e} style={{ textDecoration: 'none'}} />
                                 </Link>
                             </div>
                         )

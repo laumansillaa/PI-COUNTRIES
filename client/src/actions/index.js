@@ -13,6 +13,21 @@ export function getCountries () {
     }
 }
 
+
+// export function getCountries () {
+//     return async function (dispatch) {
+//         axios.get ('http://localhost:3001/countries')
+//         .then(resp => {
+//             dispatch({
+//                 type: 'GET_COUNTRIES',
+//                 payload: resp.data 
+//             })
+//         })
+
+//     }
+// }
+
+
 export function getActivity() {
     return async function (dispatch) {
         var info = await axios ('http://localhost:3001/activity')
@@ -22,6 +37,46 @@ export function getActivity() {
         })
     }
 }
+
+// export function getActivity() {
+//     return new Promise (
+//         function(resolve, reject, dispatch) {
+//             if(true){
+//                 resolve(   
+//                     fetch("http://localhost:3001/activity")                 
+//                     .then(r => r.json())
+//                     .then(resp => {
+//                         dispatch({
+//                             type: 'GET_ACTIVITY',
+//                             payload: resp
+//                         })
+//                     })
+//                 )
+//             } else {
+//                 reject("No anduvo nada pa")
+//             }
+            
+//         }
+//     )
+// }
+
+
+// export function getActivity() {
+//     return function (dispatch) {
+//         fetch("http://localhost:3001/activity")
+//         .then(r => r.json())
+//         .then(resp => {
+//             console.log("SOY EL RESP", resp)
+//             dispatch({
+//                 type: 'GET_ACTIVITY',
+//                 payload: resp
+//             })
+//             console.log("SOY LA PRUEBA",resp)
+            
+//         }) 
+//     }
+// }
+
 
 export function postActivity(payload) {
     return async function (dispatch){

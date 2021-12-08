@@ -38,3 +38,54 @@ const getApiInfo = async () => {
         console.log(error)
     }
 }
+
+
+
+
+<div>
+<select onChange= {e => handleSortArea(e)} >
+    <option>Filtro area</option>
+    <option value= 'menor'>Mayor a menor</option>
+    <option value= 'mayor'>Menor a mayor</option>
+</select>
+</div>
+
+
+function handleSortArea(e){
+    e.preventDefault()
+    dispatch(filtroArea(e.target.value))
+    setCurrentPage(1)
+    setOrden(`Ordenado ${e.target.value}`)
+}
+
+
+export function filtroArea(payload){
+    return {
+        type: 'FILTER_AREA',
+        payload
+    }
+}
+
+case 'FILTER_AREA':
+            const population = action.payload === 'mayor' ?
+            state.country.sort(function(a, b){
+                if(a.area > b.area){
+                    return 1;
+                }
+                if (b.area > a.area){
+                    return -1;
+                }
+                return 0
+            }) :
+            state.country.sort(function(a, b){
+                if(a.area > b.area){
+                    return -1;
+                }
+                if (b.area > a.area){
+                    return 1;
+                }
+                return 0
+            })    
+
+
+            

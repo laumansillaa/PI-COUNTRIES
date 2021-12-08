@@ -1,0 +1,12 @@
+.search{
+    background-color: rgba(243, 245, 244, 0.8);
+    border-radius: 8px;
+    opacity: 0.7;
+    border-color: aliceblue;
+}
+
+.input{
+    background-color: rgba(243, 245, 244, 0.8);
+    border-radius: 8px;
+    opacity: 0.7;
+}

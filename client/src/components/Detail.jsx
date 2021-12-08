@@ -68,8 +68,8 @@ export default function Detail () {
                             }
                         </div>
                         <div>
-                            <Link to= '/home'>
-                                <buttton className='button'>Volver</buttton>
+                            <Link to= '/home' style={{ textDecoration: 'none'}}>
+                                <buttton className='button' >Volver</buttton>
                             </Link>
                         </div>
                     </div>

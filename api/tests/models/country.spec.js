@@ -1,7 +1,7 @@
-const { Country, conn } = require('../../src/db.js');
+const { Country, Exercise, conn } = require('../../src/db.js');
 const { expect } = require('chai');
 
-describe('Country model', () => {
+describe('Country model', () => {  
   before(() => conn.authenticate()
     .catch((err) => {
       console.error('Unable to connect to the database:', err);
@@ -18,5 +18,21 @@ describe('Country model', () => {
         Country.create({ name: 'Argentina' });
       });
     });
+  });
+});
+
+
+describe('Exercises model', () => {
+  before(() => conn.authenticate()
+    .catch((err) => {
+      console.error('Unable to connect to the database:', err);
+    }));
+  describe('Validators', () => {
+    beforeEach(() => Exercise.sync({ force: true }));
+    describe('name', () => {
+      it('should work when its a valid name', () => {
+        Exercise.create({ name: 'Running' });
+      });
+    });  
   });
 });
