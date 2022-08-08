@@ -1,31 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .card {
-    
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);    
-    box-shadow: rgb(0 0 0 / 19%) 0px 10px 20px, rgb(0 0 0 / 23%) 0px 6px 6px;
-    /* padding: 4em;
-    margin: 5em; */
-    /* display: flex; */
-    /* -webkit-box-pack: center;
-    justify-content: center;
-    flex-direction: column;
-    -webkit-box-align: center; */
     align-items: center;
     border-radius: 2em;
+    font-family: Fredoka One;
+    letter-spacing: 2px;
     height: 300px;
     width: 350px;
-    backdrop-filter: blur(5px);
     color: honeydew;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
-    
-
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background: #223344;
 }
 
+.title-card{
+    margin: 1rem 0 1rem 0;
+}
 
 .imagen {
-    
     height: 180px;
     width: 150px;
     margin: 2px;
+}
+
+.region {
+    margin: .5rem 0 1rem 0;
 }
 
 .imgcard {
@@ -35,4 +33,17 @@
     
 }
 
+h3 {
+    margin: 0;
+}
 
+.card-button {
+    font-family: Bebas Neue;
+    font-size: 1rem;
+    cursor: pointer;
+    
+}
+
+.card-button:hover {
+    opacity: 100;
+}

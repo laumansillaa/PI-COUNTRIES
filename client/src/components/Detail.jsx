@@ -12,11 +12,11 @@ export default function Detail () {
 
     const dispatch = useDispatch()
     const detailcountry = useSelector((state) => state.detail)
-    console.log("Console DETAIL", detailcountry)
+    // console.log("Console DETAIL", detailcountry)
 
     useEffect(() => {
         dispatch(getDetail (id))
-    }, [dispatch])
+    }, [dispatch, id])
 
 
 
@@ -32,7 +32,7 @@ export default function Detail () {
                             <h2>{detailcountry.name}</h2>
                         </div>
                         <div>
-                            <img src= {detailcountry.flags} />
+                            <img src= {detailcountry.flags} alt='flag-not-found'/>
                         </div>
                         <div className= 'info'>
                             <h5>CAPITAL: {detailcountry.capital}</h5>

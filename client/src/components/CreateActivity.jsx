@@ -46,7 +46,6 @@ export default function CreateActivity() {
         // if(e.target.name === 'countryId') {
         //     setCountryId([...countryId, e.target.value])
         // } 
-       
             setInput({
                 ...input,
                 [e.target.name] : e.target.value
@@ -69,11 +68,7 @@ export default function CreateActivity() {
 
     function handleSubmit(e){
         e.preventDefault()
-        // const obj = {
-        //     ...input,
-            
-        // }
-        //console.log("CONSOLE LOG POST --->",input)
+
         if(!Object.getOwnPropertyNames(errors).length && input.name && input.difficulty && input.duration && input.season.length && input.country.length){
             //console.log("LLEGUEE")
             //var json= await axios.post("http://localhost:3001/activity", obj)

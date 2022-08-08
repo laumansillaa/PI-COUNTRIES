@@ -21,7 +21,7 @@ export default function Home () {
     const indexOfFirstCounetry = indexOfLastCountry - countriesPerPage 
     const currentCountry = allCountries.slice(indexOfFirstCounetry, indexOfLastCountry) 
     const allActivity = useSelector((state) => state.activity)
-    //console.log("VENGO DE HOME", allActivity)
+
 
 
     const paginado = (pageNumber) => {
@@ -33,8 +33,7 @@ export default function Home () {
         dispatch(getActivity())
 
     }, [dispatch])
-    //el segundo parametro depende de lo que depende el componentDidMount. Que se ejecute siempre y cuando 
-    //suceda eso [dispatch] --- (en este caso); ----> CONSULTAR DOCUMENTACION 
+
 
     function handleClick(e) {
         e.preventDefault();
@@ -51,7 +50,6 @@ export default function Home () {
         e.preventDefault()
         dispatch(filterByname(e.target.value))
         setCurrentPage(1);
-        //para que modifique el estado local y se renderize
         setOrden(`Ordenado ${e.target.value}`)
 
     }
@@ -78,23 +76,26 @@ export default function Home () {
 
     return (
         <div className= 'homecss'>
-            <div className= 'nav'>                
-                <div className= 'nav1'>
-                    <div className= 'hola'>
-                        <Link to= '/activity' ><button className= 'select'>CREAR ACTIVIDAD</button></Link>
-                    </div>
-                    <div className= 'hola'>
-                        <Link to= '/'><button className= 'select'>LANDING PAGE</button></Link>
-                    </div>
-                    <div className= 'hola'>
-                        <SearchBar className= 'select'/>
-                    </div>
-                </div>
-                <div className= 'title'>
+            <div className= 'nav'> 
+                <div className= 'title-home'>
                     <h2> PROYECT COUNTRIES </h2>  
                 </div>                
+                <div className= 'nav1'>
+                    <div className='cont-item-nav'>
+                        <button onClick= {e => {handleClick(e)}} className='select' >RECARGAR PAISES</button>
+                    </div>
+                    <div className='cont-item-nav'>
+                        <Link to= '/activity' ><button className= 'select'>CREAR ACTIVIDAD</button></Link>
+                    </div>
+                    <div className='cont-item-nav'>
+                        <Link to= '/'><button className= 'select'>LANDING PAGE</button></Link>
+                    </div>
+                    <div className='cont-item-nav'>
+                        <SearchBar />
+                    </div>
+                </div>
+               
                 <div className= 'navbar'>
-                    <button onClick= {e => {handleClick(e)}} className='select' >Volver a cargar los paises</button>
                     <div>
                         <select onChange= {e => handleSortByName(e)} className='select' >
                             <option> Ordenar por nombre </option>
@@ -129,32 +130,23 @@ export default function Home () {
                             })}                       
                         </select>
                     </div>
-
-                    <div className= 'subnav'>
+                </div>
+                <div className= 'subnav'>
                         <Paginado countriesPerPage= {countriesPerPage} 
                          allCountries={allCountries.length}
                          paginado = {paginado}/>
-                    </div>
                 </div>
-
             </div>            
             <div className= 'containercard'>
                 {
                     currentCountry?.map(e => {
-                        //console.log("HOLA", e.id)
                         return (
-                            <div className= 'cardHome'>
-                                <Link to= {'/countries/' + e.id}  style={{ textDecoration: 'none'}} >
-                                    <Card key={e.id} country= {e} style={{ textDecoration: 'none'}} />
-                                </Link>
-                            </div>
+                            <Card key={e.id} country= {e} style={{ textDecoration: 'none'}} />
                         )
                         
                     })
                 }
             </div>
-
         </div>
-        
     )
 }

@@ -1,38 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+.landingPage{ 
+    padding: 4em;
+    margin: auto;    
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+    backdrop-filter: blur(10px);
+    border-radius: 2em;
+    /* width: 100%; */
+    height: 100%;
+}
+
 .h1landing{
     margin-top: 0%;
-    font-family: -webkit-pictograph;
+    font-family: Alfa Slab One;
+    font-size: 4rem;
+    color: #fff;
+    letter-spacing: 3px;
     
 }
 
+.img-landing {
+    height: 12rem;
+    width: 12rem;
+}
 
-.button{
-    font-family: 'Akaya Telivigala', cursive;
-    color: #000 ;
+.landing-button {
+    border: 2px solid red;
+}
+
+.button-landing{
+    font-family: Alfa Slab One;
+    color: #fff;
     font-size: 20px;
-    font-weight: 400;
     padding: 0.5em 1.2em;
     background: rgba(0,0,0,0);
     border: 2px solid;
     border-color: #fff;
     transition: all 1s ease;
-    margin-top: 150px;
+    margin-top: 100px;
  }
- .button:hover {
-   background: #000;
-   color: #fff ;
+ .button-landing:hover {
+   background: #fff;
+   color: black;
    cursor: pointer;
  }
 
-.container{ 
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);    
-    box-shadow: rgb(0 0 0 / 19%) 0px 10px 20px, rgb(0 0 0 / 23%) 0px 6px 6px;
-    padding: 4em;
-    margin: auto;    
-    justify-content: center;    
-    align-items: center;
-    backdrop-filter: blur(10px);
-    border-radius: 2em;
-    
-    
-
-}

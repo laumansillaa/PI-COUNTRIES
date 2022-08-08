@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 .homecss{
-    background-image: url('../styles/image.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    
-    
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    background: #7598BD;
+    width: 100%;
+    height: 100%;
+    padding-top: .5rem;
 }
 
 .navbar {
@@ -22,58 +27,70 @@
 
 }
 
+.title-home {
+    font-family: Alfa Slab One;
+    font-size: 1rem;
+    color: #fff;
+    letter-spacing: 3px;
+    text-align: start;
+    padding-left: 1rem;
+    box-shadow: 2px 2px 2px #0000;
+    /* border: 1px solid #000; */
+}
+
 
 .containercard{
     width: 100%;
-    height: 1400px;
     display: grid;
-    grid-template-columns:  repeat(3, 1fr) ;
-    grid-template-rows:  repeat(2,450px);
-    gap: 1em;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns:  repeat(3, 1fr);
+    grid-template-rows:  repeat(2,350px);
+    padding: 2.5rem 0 2.5rem 0;
 
 }
-
 
 .subnav {
     /* width: 100vw;
     height: 5vh;     */
-    display: flex;
+	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	flex-wrap: nowrap;
+	justify-content: center;
 	align-items: center;
-	align-content: space-around;
+	align-content: stretch;
     
 }
 
-
-
 .nav1{
     margin-top: 15px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
     height: 40px;    
     width: 100%;
   
 }
 
-.nav{
-
-    backdrop-filter: blur(20px);
-    width: 100%;
-    height: 200px;
-    border-radius: 2rem;
-
+h2 {
+    margin: 0;
 }
 
 .select{
-    background-color: rgba(243, 245, 244, 0.8);
+    background: #456990;
+    font-family: Fredoka One;
+    border: 0;
+    font-size: 1rem;
     opacity: 0.7;
-    border-radius: 8px;
-    /* z-index:1;
-	filter:alpha(opacity=70);
-	-moz-opacity:.70;
-	opacity:.70; */
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+
+}
+
+.cont-item-nav {
+    width: 25%;
 }
 
 .select:hover{

@@ -23,9 +23,9 @@ export default function SearchBar() {
     }
 
     return (
-        <div>
+        <div className='cont-search'>
             <input type= 'text' placeholder= 'Buscar...' onChange= {(e) => handleInputChange(e)} className= 'search' />
-            <button type='submit' onClick= {(e) => handleSubmit(e)} className= 'input' >Buscar</button>
+            <button type='submit' onClick= {(e) => handleSubmit(e)} className='button-search' >Buscar</button>
         </div>
             
         

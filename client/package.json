@@ -3,10 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/preset-env": "^7.17.10",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.1",
     "@testing-library/user-event": "^12.2.2",
     "axios": "^0.24.0",
+    "babel-preset-react-app": "^10.0.1",
+    "cross-env": "^7.0.3",
+    "jasmine": "^4.1.0",
+    "jsdom": "^19.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.6",
@@ -20,7 +25,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "cross-env NODE_ENV=test jasmine",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,6 +44,19 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/register": "^7.17.7",
+    "enzyme": "^3.11.0",
+    "jasmine-enzyme": "^7.1.2",
+    "jest-jasmine2": "^27.5.1",
+    "msw": "^0.39.2"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
     ]
   }
 }

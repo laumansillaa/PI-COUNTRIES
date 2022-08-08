@@ -23,7 +23,6 @@ export function getCountries () {
 //                 payload: resp.data 
 //             })
 //         })
-
 //     }
 // }
 
@@ -38,44 +37,6 @@ export function getActivity() {
     }
 }
 
-// export function getActivity() {
-//     return new Promise (
-//         function(resolve, reject, dispatch) {
-//             if(true){
-//                 resolve(   
-//                     fetch("http://localhost:3001/activity")                 
-//                     .then(r => r.json())
-//                     .then(resp => {
-//                         dispatch({
-//                             type: 'GET_ACTIVITY',
-//                             payload: resp
-//                         })
-//                     })
-//                 )
-//             } else {
-//                 reject("No anduvo nada pa")
-//             }
-            
-//         }
-//     )
-// }
-
-
-// export function getActivity() {
-//     return function (dispatch) {
-//         fetch("http://localhost:3001/activity")
-//         .then(r => r.json())
-//         .then(resp => {
-//             console.log("SOY EL RESP", resp)
-//             dispatch({
-//                 type: 'GET_ACTIVITY',
-//                 payload: resp
-//             })
-//             console.log("SOY LA PRUEBA",resp)
-            
-//         }) 
-//     }
-// }
 
 
 export function postActivity(payload) {
