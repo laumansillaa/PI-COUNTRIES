@@ -1,5 +1,22 @@
-.paginado-button {
-    color: #223344;
-    width: 10px;
-    height: 15px;
+.con-pagenation{
+    /* background: #223344; */
+
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+    width: 100%;
+
+}
+
+.page-button{
+    background: #223344;
+    color: #fff;
+    margin: 0 3px 3px 0;
+    font-family: Alfa Slab One;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+
 }

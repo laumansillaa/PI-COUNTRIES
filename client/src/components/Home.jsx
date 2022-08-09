@@ -96,46 +96,46 @@ export default function Home () {
                 </div>
                
                 <div className= 'navbar'>
-                    <div>
-                        <select onChange= {e => handleSortByName(e)} className='select' >
-                            <option> Ordenar por nombre </option>
-                            <option value= 'asc' >A - Z</option>
-                            <option value= 'desc' >Z - A</option>
+                    <div className='cont-item-nav'>
+                        <select onChange= {e => handleSortByName(e)} className='filter-select' >
+                            <option className='select-option'> Ordenar por nombre </option>
+                            <option value= 'asc' className='select-option'>A - Z</option>
+                            <option value= 'desc'className='select-option'>Z - A</option>
                         </select>
                     </div>
-                    <div>
-                        <select onChange= {e => handleSortByPopulation(e)} className='select' > 
+                    <div className='cont-item-nav'>
+                        <select onChange= {e => handleSortByPopulation(e)} className='filter-select' > 
                             <option> Ordenar por poblacion </option>
-                            <option value='mayor' > Menor a mayor </option>
-                            <option value='menor'> Mayor a menor </option>
+                            <option value='mayor' className='select-option' > Menor a mayor </option>
+                            <option value='menor' className='select-option'> Mayor a menor </option>
                         </select>
                     </div>
-                    <div>
-                        <select onChange= {e => handleFilterContinent(e)} className='select' >
-                            <option value= 'all'> Todos </option>
-                            <option value= 'Americas' > America </option>
-                            <option value= 'Europe' > Europa </option>
-                            <option value=  'Asia' > Asia </option>
-                            <option value= 'Africa' > Africa </option>
-                            <option value= 'Oceania' > Oceania </option>
+                    <div className='cont-item-nav'>
+                        <select onChange= {e => handleFilterContinent(e)} className='filter-select' >
+                            <option value= 'all' className='select-option'> Todos </option>
+                            <option value= 'Americas' className='select-option'> America </option>
+                            <option value= 'Europe' className='select-option'> Europa </option>
+                            <option value=  'Asia' className='select-option'> Asia </option>
+                            <option value= 'Africa' className='select-option'> Africa </option>
+                            <option value= 'Oceania' className='select-option'> Oceania </option>
                         </select>
                     </div>
-                    <div>
-                        <select onChange= {e => handleFilterActivity(e)} className='select' >
-                            <option value= 'all'> Actividad turistica </option> 
+                    <div className='cont-item-nav'>
+                        <select onChange= {e => handleFilterActivity(e)} className='filter-select' >
+                            <option value= 'all' className='select-option'> Actividad turistica </option> 
                             {allActivity.map(e => {
                                 return (
-                                    <option key= {e.id} value= {e.name} >{e.name}</option>
+                                    <option key= {e.id} value= {e.name} className='select-option'>{e.name}</option>
                                 )
                             })}                       
                         </select>
                     </div>
                 </div>
-                <div className= 'subnav'>
-                        <Paginado countriesPerPage= {countriesPerPage} 
-                         allCountries={allCountries.length}
-                         paginado = {paginado}/>
-                </div>
+
+                <Paginado countriesPerPage= {countriesPerPage} 
+                    allCountries={allCountries.length}
+                    paginado = {paginado}/>
+
             </div>            
             <div className= 'containercard'>
                 {
