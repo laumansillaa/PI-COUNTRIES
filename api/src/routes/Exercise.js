@@ -18,15 +18,10 @@ router.post('/activity', async (req, res, next) => {
                 difficulty,
                 duration,
                 season
-                // where: {
-                //     name: name,
-                //     difficulty: difficulty,
-                //     duration: duration,
-                //     season: season,
-                // }
+
             })
-            console.log(activity[0])
-            console.log("COUNTRYID: ---> ", country)
+            //console.log(activity[0])
+            //console.log("COUNTRYID: ---> ", country)
     
             
                 const match = await Country.findAll({
@@ -37,11 +32,6 @@ router.post('/activity', async (req, res, next) => {
                 
                activity.addCountry(match)
             
-    
-            // let exercise = await Country.findAll({
-            //     where : {name : country}
-            // })    
-    
             res.json(activity);
         }
 

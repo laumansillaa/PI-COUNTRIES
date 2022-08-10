@@ -1,31 +1,10 @@
 require ('dotenv').config();
 const {Router} = require('express');
-const axios = require('axios').default;
+// const axios = require('axios').default;
 const {Op} = require('sequelize')
 const {Country, Exercise} = require('../db');
 
 const router = Router();
-
-
-// const getAllInfo = async () => {
-//     const apiurl = await axios.get ("https://restcountries.com/v3/all");
-//     //console.log("CONSOLE.LOG", apiurl)
-//     const apiinfo = awaitapiurl.data.map(e => {
-//         return Country.findOrCreate({
-//             name: e.name.common,
-//             id: e.cca3,
-//             capital: e.capital? e.capital[0] : "-",
-//             region: e.region,
-//             subregion: e.subregion,
-//             area: e.area,
-//             population: e.population,
-//             flags: e.flags[1]
-//         })
-//     })
-    
-//     return apiinfo;
-// }
-
 
 
 router.get('/countries', async (req, res, next) => {
@@ -68,14 +47,6 @@ router.get('/countries/:id', async (req, res, next) => {
 
         res.json(country)
 
-        // let idcountry = allcountry.filter(e => e.id.toLowerCase() === id.toLowerCase(), {
-        //     include : [{
-        //         model: Exercise
-        //     }]
-        // } )
-        // idcountry.length ? 
-        // res.status(200).json(idcountry) :
-        // res.status(404).send('No se encontraron resultados')
     } catch (error) {
         next(error)
     }
