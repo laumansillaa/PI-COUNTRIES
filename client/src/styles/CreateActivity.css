@@ -1,26 +1,149 @@
-.container{
+.container-create{
     width: 100%;
     height: 100%;
-    
 
 }
 
+h1 {
+    margin: 0;
+}
+.create-title {
+    font-family: Alfa Slab One;
+    letter-spacing: 3px;
+    color: #fff;
+    margin: 5px 0 5px 0;
+}
 
-.create{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);    
-    box-shadow: rgb(0 0 0 / 19%) 0px 10px 20px, rgb(0 0 0 / 23%) 0px 6px 6px;
-    padding: 4em;
-    margin: 5em;
+.create-select{
+    background: #456990;
+    font-family: Fredoka One;
+    text-align: start;
+    border: 0;
+    font-size: 1rem;
+    opacity: 0.7;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.create-nav{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around; 
+    background: #223344;
+}
+
+
+.cont-form-body {
+    /* border: 2px solid black; */
+    width: 100%;
+    height: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.f-form {
+    width: 50%;
+    height: 100%;
+    padding: 0 3rem 0 3rem;
+}
+
+.cont-form {
+    height: 100%;
+    width: 100%;
+    font-family: Fredoka One;
     display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    flex-direction: column;
-    -webkit-box-align: center;
-    align-items: center;
-    border-radius: 2em;
-    width: 22em;
-    height: 15em;
-    backdrop-filter: blur(5px);
-    color: honeydew;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+    margin-top: 15%;
 }
 
+.form-title{
+    width: 80%;
+}
+
+.form-country{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+    width: 80%;
+}
+
+.form-label{
+    text-align: start;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.form-select {
+    background: #fff;
+    font-family: Fredoka One;
+    text-align: center;
+    border: 0;
+    padding: 0 10px 0 10px;
+    font-size: 1rem;
+    opacity: 0.7;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.form-input {
+    background: #fff;
+    font-family: Fredoka One;
+    text-align: center;
+    border: 0;
+    /* padding: 0 10px 0 10px; */
+    padding: 0;
+    font-size: 1rem;
+    opacity: 0.7;
+    height: 100%;
+    width: 100%;
+
+}
+
+.cont-section-form {
+    width: 80%
+}
+
+.cont-img{
+    width: 50%;
+    height: 100%;
+    margin: 3rem 0 3rem 0;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.img-create{
+    width: 400px;
+    /* height: 200px; */
+
+}
+
+.createbutton{
+    background: #fff;
+    font-family: Fredoka One;
+    font-size: large;
+    margin: 1rem 0 1rem 0;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.createbutton:hover{
+    background: #223344;
+    opacity: 100%;
+}
+
+.error{
+    color: #fff;
+    letter-spacing: 2px;
+}

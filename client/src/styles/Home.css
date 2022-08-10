@@ -98,3 +98,7 @@ h2 {
 .select:hover{
     opacity: 100;
 }
+
+.filter-select:hover{
+    opacity: 100;
+}
